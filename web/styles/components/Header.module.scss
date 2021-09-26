@@ -2,7 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 50px auto;
+  gap: 50px;
+  padding: 50px 0;
+
+  @media only screen and (max-width: 1250px) {
+    padding: 30px 20px;
+  }
 
   img {
     max-height: 350px;

@@ -1,13 +1,12 @@
 .card {
   background-color: #ffffff;
+  max-width: 400px;
   padding: 20px 51px 20px 61px;
   display: flex;
   flex: {
     direction: column;
   }
   justify-content: flex-start;
-  margin: 5px;
-  max-width: 400px;
 
   &> *{
     padding: 15px 0;

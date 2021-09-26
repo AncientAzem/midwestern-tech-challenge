@@ -50,7 +50,7 @@ const Landing = ( {content} : InferGetStaticPropsType<typeof getStaticProps> ) =
     }
 
     return (
-        <div className={styles.container}>
+        <div className={styles.homeContainer}>
             <Header title={content.heading.title} link={content.heading.link} />
 
             <main>
