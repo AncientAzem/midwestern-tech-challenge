@@ -1,0 +1,55 @@
+.card {
+  background-color: #ffffff;
+  padding: 20px 51px 20px 61px;
+  display: flex;
+  flex: {
+    direction: column;
+  }
+  justify-content: flex-start;
+  margin: 5px;
+  max-width: 400px;
+
+  &> *{
+    padding: 15px 0;
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    height: 105px;
+    width: 105px;
+    margin: 15px auto;
+    padding: 0;
+  }
+
+  h2 {
+    color: #222222;
+    font: {
+      size: 36px;
+      weight: bold;
+    }
+    line-height: 25px;
+  }
+
+  p {
+    color: #858585;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+  }
+
+  .link {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 21px;
+    margin: auto;
+
+    a {
+      display: inline-block;
+      background-color: #DEBF79;
+      padding: 12px 25px;
+    }
+  }
+
+
+}

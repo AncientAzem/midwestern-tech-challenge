@@ -1,3 +1,20 @@
 .container {
-  background-color: #222222;
+  height: 100vh;
+  margin: auto;
+  max-width: 1250px;
+
+  .cards {
+    display: flex;
+    flex: {
+      grow: 1;
+      wrap: wrap;
+    }
+    justify-content: space-around;
+  }
+
+  .challenge {
+    ul {
+      list-style: square;
+    }
+  }
 }

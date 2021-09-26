@@ -41,18 +41,20 @@ const Landing = ( {content} : InferGetStaticPropsType<typeof getStaticProps> ) =
             </Head>
 
             <main>
-                {content.cards?.map((card, index) => {
-                    return (
-                        <Card key={index}
-                              icon={card.icon}
-                              heading={card.heading}
-                              body={card.body}
-                              button={card.button}
-                        />
-                    )
-                })}
+                <div className={styles.cards}>
+                    {content.cards?.map((card, index) => {
+                        return (
+                            <Card key={index}
+                                  icon={card.icon}
+                                  heading={card.heading}
+                                  body={card.body}
+                                  button={card.button}
+                            />
+                        )
+                    })}
+                </div>
 
-                <div className={"challenge"}>
+                <div className={styles.challenge}>
                     <button onClick={filterDuplicateNamesChallenge}>
                         Filter Names
                     </button>
@@ -73,6 +75,11 @@ export const getStaticProps = async () => {
         title: "Landing",
         cards: [
             {
+                icon: {
+                    path:  "/../public/images/Talkie.svg",
+                    width: 50,
+                    height: 105
+                },
                 heading: "Heading One",
                 body: "Integer accumsan molestie nisl, id faucibus urna accumsan quis. Proin vulputate, mauris semper maximus. ",
                 button: {
@@ -81,6 +88,11 @@ export const getStaticProps = async () => {
                 }
             },
             {
+                icon: {
+                    path:  "/../public/images/Rabbit.svg",
+                    width: 105,
+                    height: 62
+                },
                 heading: "Heading Two",
                 body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
                 button: {
@@ -89,6 +101,11 @@ export const getStaticProps = async () => {
                 }
             },
             {
+                icon: {
+                    path:  "/../public/images/Shield.svg",
+                    width: 98,
+                    height: 98
+                },
                 heading: "Heading Three",
                 body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
                 button: {
