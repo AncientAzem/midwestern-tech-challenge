@@ -1,6 +1,6 @@
 .container {
-  height: 100vh;
-  margin: auto;
+  height: 100%;
+  margin: 30px auto;
   max-width: 1250px;
 
   .cards {
@@ -10,15 +10,19 @@
       wrap: wrap;
     }
     justify-content: space-around;
+    margin: 15px 0;
   }
 
   .challenge {
+    margin-top: 50px;
+
     h1 {
       font: {
         weight: 700;
         size: 48px;
       }
       line-height: 72px;
+      padding-bottom: 25px;
     }
 
     p {

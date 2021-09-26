@@ -1,0 +1,20 @@
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px auto;
+
+  img {
+    max-height: 350px;
+  }
+
+  a {
+    font: {
+      weight: 700;
+      size: 18px
+    }
+    line-height: 27px;
+    color: #DEBF79;
+    text-transform: lowercase;
+  }
+}
