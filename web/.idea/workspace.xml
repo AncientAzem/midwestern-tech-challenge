@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82ee2088-a4c4-4162-b6cd-165f4ce131dd" name="Changes" comment="Moved Stuff Around and Added Card Component">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/card.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/example.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/components/card.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/pages/Landing.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/challenge.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/common.ts" beforeDir="false" afterPath="$PROJECT_DIR$/models/common.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/pages/Home.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/pages/Landing.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/pages/Landing.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +33,7 @@
     <setting file="file://$PROJECT_DIR$/components/card.tsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/models/common.ts" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/styles/pages/Landing.module.scss" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/styles/components/card.scss" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/styles/components/Card.module.scss" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/pages/example.tsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/pages/index.tsx" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -72,6 +64,7 @@
       <recent name="\\wsl$\Ubuntu\home\devjinial\projects\mi-tech-challenge\web\pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\devjinial\projects\mi-tech-challenge\web\public\images" />
       <recent name="\\wsl$\Ubuntu\home\devjinial\projects\mi-tech-challenge\web\styles\pages" />
     </key>
   </component>
@@ -85,7 +78,8 @@
       <updated>1632610839583</updated>
       <workItem from="1632610844978" duration="5743000" />
       <workItem from="1632618509761" duration="3428000" />
-      <workItem from="1632621974234" duration="380000" />
+      <workItem from="1632621974234" duration="6560000" />
+      <workItem from="1632628835280" duration="822000" />
     </task>
     <task id="LOCAL-00001" summary="Added Loop to Home Page">
       <created>1632614062489</created>
@@ -101,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632614153022</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Moved Stuff Around and Added Card Component">
+      <created>1632622377778</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1632622377778</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

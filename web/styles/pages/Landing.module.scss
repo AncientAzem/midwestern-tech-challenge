@@ -13,8 +13,36 @@
   }
 
   .challenge {
+    h1 {
+      font: {
+        weight: 700;
+        size: 48px;
+      }
+      line-height: 72px;
+    }
+
+    p {
+      font: {
+        weight: 500;
+        size: 16px;
+      }
+      line-height: 30px;
+
+      a {
+        color: #DEBF79;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+
     ul {
-      list-style: square;
+      list-style: square inside;
+
+      li {
+        line-height: 25px;
+      }
     }
   }
 }

@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import {InferGetStaticPropsType} from "next";
-import {CardData} from "../models/common";
+
+import Swal from 'sweetalert2'
 import Head from "next/head";
 import Card from "../components/card";
+import {CardData} from "../models/common";
+
 import styles from '../styles/pages/Landing.module.scss'
 
 type LandingViewModel = {
@@ -14,23 +17,31 @@ const Landing = ( {content} : InferGetStaticPropsType<typeof getStaticProps> ) =
     const [filteredNames, setFilteredNames] = useState<string[]>()
 
     function filterDuplicateNamesChallenge(){
-        let firstList = [
-            'Matt Johnson',
-            'Bart Paden',
-            'Ryan Doss',
-            'Jared Malcolm'
-        ];
-        let secondList = [
-            'Matt Johnson',
-            'Bart Paden',
-            'Jordan Heigle',
-            'Tyler Viles'
-        ];
+        if (filteredNames != undefined){
+            Swal.fire({
+                title: "Error!",
+                text: "You have already completed this operation.",
+                icon: "error"
+            })
+        } else {
+            let firstList = [
+                'Matt Johnson',
+                'Bart Paden',
+                'Ryan Doss',
+                'Jared Malcolm'
+            ];
+            let secondList = [
+                'Matt Johnson',
+                'Bart Paden',
+                'Jordan Heigle',
+                'Tyler Viles'
+            ];
 
-        let combinedList = secondList.concat(firstList);
-        setFilteredNames(combinedList
-            .filter((object, index, array) => array.findIndex(o => o == object) === index
-        ));
+            let combinedList = secondList.concat(firstList);
+            setFilteredNames(combinedList
+                .filter((object, index, array) => array.findIndex(o => o == object) === index
+                ));
+        }
     }
 
     return (
@@ -55,9 +66,12 @@ const Landing = ( {content} : InferGetStaticPropsType<typeof getStaticProps> ) =
                 </div>
 
                 <div className={styles.challenge}>
-                    <button onClick={filterDuplicateNamesChallenge}>
-                        Filter Names
-                    </button>
+                    <h1>Technical Javascript Challenge</h1>
+                    <p>
+                        Remove the duplicates in 2 Javascript objects and output the list of distinct names in an
+                        unordered list when <a onClick={filterDuplicateNamesChallenge}> this link</a> is clicked. If the operation has been completed already notify
+                        the user that this has already been done.
+                    </p>
 
                     <ul>
                         {filteredNames?.map( (name, index) =>
@@ -76,7 +90,7 @@ export const getStaticProps = async () => {
         cards: [
             {
                 icon: {
-                    path:  "/../public/images/Talkie.svg",
+                    path:  "/images/Talkie.svg",
                     width: 50,
                     height: 105
                 },
@@ -89,7 +103,7 @@ export const getStaticProps = async () => {
             },
             {
                 icon: {
-                    path:  "/../public/images/Rabbit.svg",
+                    path:  "/images/Rabbit.svg",
                     width: 105,
                     height: 62
                 },
@@ -102,7 +116,7 @@ export const getStaticProps = async () => {
             },
             {
                 icon: {
-                    path:  "/../public/images/Shield.svg",
+                    path:  "/images/Shield.svg",
                     width: 98,
                     height: 98
                 },
