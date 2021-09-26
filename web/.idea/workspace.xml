@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82ee2088-a4c4-4162-b6cd-165f4ce131dd" name="Changes" comment="Moved Stuff Around and Added Card Component">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/pages/Landing.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/pages/Landing.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    <list default="true" id="82ee2088-a4c4-4162-b6cd-165f4ce131dd" name="Changes" comment="Updated Card Styling">
+      <change beforePath="$PROJECT_DIR$/styles/components/Card.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/Card.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +74,7 @@
       <workItem from="1632610844978" duration="5743000" />
       <workItem from="1632618509761" duration="3428000" />
       <workItem from="1632621974234" duration="6560000" />
-      <workItem from="1632628835280" duration="822000" />
+      <workItem from="1632628835280" duration="949000" />
     </task>
     <task id="LOCAL-00001" summary="Added Loop to Home Page">
       <created>1632614062489</created>
@@ -102,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632622377778</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Finished Challenge">
+      <created>1632629730085</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1632629730085</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +128,8 @@
     <MESSAGE value="Started JS Challenge" />
     <MESSAGE value="Moved Stuff Around" />
     <MESSAGE value="Moved Stuff Around and Added Card Component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved Stuff Around and Added Card Component" />
+    <MESSAGE value="Finished Challenge" />
+    <MESSAGE value="Updated Card Styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Card Styling" />
   </component>
 </project>
