@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82ee2088-a4c4-4162-b6cd-165f4ce131dd" name="Changes" comment="Added Loop to Home Page">
-      <change afterPath="$PROJECT_DIR$/models/challenge.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/common.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="82ee2088-a4c4-4162-b6cd-165f4ce131dd" name="Changes" comment="Started JS Challenge">
+      <change beforePath="$PROJECT_DIR$/models/challenge.ts" beforeDir="false" afterPath="$PROJECT_DIR$/models/challenge.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +35,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -44,6 +43,11 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="\\wsl$\Ubuntu\home\devjinial\projects\mi-tech-challenge\web\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\devjinial\projects\mi-tech-challenge\web\pages" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -53,8 +57,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632610839583</updated>
-      <workItem from="1632610844978" duration="3193000" />
+      <workItem from="1632610844978" duration="5743000" />
     </task>
+    <task id="LOCAL-00001" summary="Added Loop to Home Page">
+      <created>1632614062489</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1632614062489</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Removed Next.js API">
+      <created>1632614153022</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1632614153022</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,6 +92,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Loop to Home Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Loop to Home Page" />
+    <MESSAGE value="Removed Next.js API" />
+    <MESSAGE value="Started JS Challenge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started JS Challenge" />
   </component>
 </project>

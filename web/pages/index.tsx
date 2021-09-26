@@ -8,10 +8,18 @@ import styles from '../styles/Home.module.css'
 type HomeViewModel = {
   title: string
   cards?: Card[]
-  challenge: ChallengeObject[]
+  challenge: ChallengeObject
 }
 
 const Home = ( { content } : InferGetStaticPropsType<typeof getStaticProps> ) => {
+  function filterDuplicateNamesChallenge(){
+    let combinedList = content.challenge.secondList.concat(content.challenge.firstList);
+    content.challenge.filteredNames = combinedList
+        .filter((object, index, array) => array.findIndex(o => o == object) === index
+    );
+    console.log(content.challenge.filteredNames);
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -37,6 +45,16 @@ const Home = ( { content } : InferGetStaticPropsType<typeof getStaticProps> ) =>
               </a>
           )}
         </div>
+
+        <div className={"challenge"}>
+          <button onClick={filterDuplicateNamesChallenge}>
+            Filter Names
+          </button>
+
+          {content.challenge.filteredNames?.map( (name, index) =>
+            <p key={index}>{name}</p>
+          )}
+        </div>
       </main>
 
       <footer className={styles.footer}>
@@ -59,29 +77,42 @@ export const getStaticProps = async () => {
   const content: HomeViewModel = {
     title: "Midwestern Tech Challenge",
     cards: [
-      { heading: "Documentation", body: "Find in-depth information about Next.js features and API.", url: "https://nextjs.org/docs"},
-      { heading: "Learn", body: "Learn about Next.js in an interactive course with quizzes!", url: "https://nextjs.org/learn"},
-      { heading: "Examples", body: "Discover and deploy boilerplate example Next.js projects.", url: "https://github.com/vercel/next.js/tree/master/examples"},
-      { heading: "Deploy", body: "Instantly deploy your Next.js site to a public URL with Vercel.", url: "https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"},
-    ],
-    challenge: [
       {
-        names: [
+        heading: "Documentation",
+        body: "Find in-depth information about Next.js features and API.",
+        url: "https://nextjs.org/docs"
+      },
+      {
+        heading: "Learn",
+        body: "Learn about Next.js in an interactive course with quizzes!",
+        url: "https://nextjs.org/learn"
+      },
+      {
+        heading: "Examples",
+        body: "Discover and deploy boilerplate example Next.js projects.",
+        url: "https://github.com/vercel/next.js/tree/master/examples"
+      },
+      {
+        heading: "Deploy",
+        body: "Instantly deploy your Next.js site to a public URL with Vercel.",
+        url: "https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+      },
+    ],
+    challenge:
+        {
+          firstList: [
             'Matt Johnson',
             'Bart Paden',
             'Ryan Doss',
             'Jared Malcolm'
-        ]
-      },
-      {
-        names: [
-          'Matt Johnson',
-          'Bart Paden',
-          'Jordan Heigle',
-          'Tyler Viles'
-        ]
-      }
-    ]
+          ],
+          secondList: [
+            'Matt Johnson',
+            'Bart Paden',
+            'Jordan Heigle',
+            'Tyler Viles'
+          ]
+        }
   }
 
   return {

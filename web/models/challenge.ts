@@ -1,3 +1,5 @@
 export interface ChallengeObject {
-    names: string[];
+    firstList: string[];
+    secondList: string[];
+    filteredNames?: string[]
 }
