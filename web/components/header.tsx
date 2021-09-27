@@ -1,5 +1,6 @@
 import {Component} from "react";
 import Head from "next/head";
+import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../styles/components/Header.module.scss';
 import {Header} from "../models/common";
@@ -19,7 +20,10 @@ class HeaderComponent extends Component<Header>{
                         height={75}
                         width={350}
                     />
-                    <a href={this.props.link.url}>{this.props.link.text}</a>
+                    <Link href={this.props.link.url}>
+                        <a >{this.props.link.text}</a>
+                    </Link>
+
                 </header>
             </>
         )

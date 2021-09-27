@@ -13,10 +13,3 @@ export interface Header {
     title: string;
     link: Button;
 }
-
-export interface FormInput {
-    id: string;
-    type: string;
-    label: string;
-    placeholder?: string;
-}
