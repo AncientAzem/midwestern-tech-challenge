@@ -2,9 +2,9 @@ import {Component} from "react";
 import Head from "next/head";
 import Image from 'next/image'
 import styles from '../styles/components/Header.module.scss';
-import {HeaderData} from "../models/header";
+import {Header} from "../models/common";
 
-class Header extends Component<HeaderData>{
+class HeaderComponent extends Component<Header>{
     render() {
         return (
             <>
@@ -26,4 +26,4 @@ class Header extends Component<HeaderData>{
     }
 }
 
-export default Header
+export default HeaderComponent

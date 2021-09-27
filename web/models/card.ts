@@ -1,6 +1,6 @@
 import {Button, SvgIcon} from "./common";
 
-export interface CardData {
+export interface Card {
     icon?: SvgIcon;
     heading: string;
     body: string;

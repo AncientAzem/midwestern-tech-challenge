@@ -5,14 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82ee2088-a4c4-4162-b6cd-165f4ce131dd" name="Changes" comment="Added Header">
-      <change afterPath="$PROJECT_DIR$/components/header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/card.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/Logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/components/Header.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/formInput.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/card.ts" beforeDir="false" afterPath="$PROJECT_DIR$/models/card.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/common.ts" beforeDir="false" afterPath="$PROJECT_DIR$/models/common.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/header.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/example.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/example.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/Card.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/Card.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/pages/Contact.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/pages/Contact.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/pages/Landing.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/pages/Landing.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +29,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="SCSS File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -32,18 +39,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/pages/index.tsx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/models/header.ts" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/pages/example.tsx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/styles/components/Card.module.scss" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/styles/globals.scss" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/models/card.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/models/common.ts" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/components/header.tsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/components/card.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/styles/components/Card.module.scss" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/styles/globals.scss" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/styles/pages/Landing.module.scss" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/models/common.ts" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/models/card.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pages/index.tsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/styles/components/Header.module.scss" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/pages/_app.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pages/contact.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pages/example.tsx" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1yeT0eeRydAuDyZkvIWc4T3P3MO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -72,8 +79,9 @@
       <recent name="\\wsl$\Ubuntu\home\devjinial\projects\mi-tech-challenge\web\pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="\\wsl$\Ubuntu\home\devjinial\projects\mi-tech-challenge\web\public\images" />
       <recent name="\\wsl$\Ubuntu\home\devjinial\projects\mi-tech-challenge\web\styles\pages" />
+      <recent name="\\wsl$\Ubuntu\home\devjinial\projects\mi-tech-challenge\web\styles\components" />
+      <recent name="\\wsl$\Ubuntu\home\devjinial\projects\mi-tech-challenge\web\public\images" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -89,7 +97,9 @@
       <workItem from="1632621974234" duration="6560000" />
       <workItem from="1632628835280" duration="949000" />
       <workItem from="1632629809684" duration="1229000" />
-      <workItem from="1632631071780" duration="2295000" />
+      <workItem from="1632631071780" duration="3690000" />
+      <workItem from="1632690912699" duration="1218000" />
+      <workItem from="1632692162877" duration="12188000" />
     </task>
     <task id="LOCAL-00001" summary="Added Loop to Home Page">
       <created>1632614062489</created>
@@ -126,7 +136,21 @@
       <option name="project" value="LOCAL" />
       <updated>1632629839817</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added Header">
+      <created>1632633375897</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1632633375897</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added Header">
+      <created>1632633394857</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1632633394857</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

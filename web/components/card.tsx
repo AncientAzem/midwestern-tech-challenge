@@ -1,9 +1,9 @@
-import {CardData} from "../models/card";
+import {Card} from "../models/card";
 import {Component} from "react";
 import Image from 'next/image'
 import styles from '../styles/components/Card.module.scss';
 
-class Card extends Component<CardData> {
+class CardComponent extends Component<Card> {
     render() {
         return (
             <div className={styles.card}>
@@ -20,7 +20,7 @@ class Card extends Component<CardData> {
                 <h2>{this.props.heading}</h2>
                 <p>{this.props.body}</p>
                 {(this.props.button != null) &&
-                    <div className={styles.link}>
+                    <div className={'button'}>
                         <a href={this.props.button.url}>
                             {this.props.button.text}
                         </a>
@@ -31,4 +31,4 @@ class Card extends Component<CardData> {
     }
 }
 
-export default Card
+export default CardComponent

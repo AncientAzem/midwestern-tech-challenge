@@ -3,19 +3,19 @@ import {InferGetStaticPropsType} from "next";
 import Swal from 'sweetalert2'
 
 // Components
-import Header from "../components/header";
-import Card from "../components/card";
+import HeaderComponent from "../components/header";
+import CardComponent from "../components/card";
 
 // Models for Components
-import {CardData} from "../models/card";
-import {HeaderData} from "../models/header";
+import {Header} from "../models/common";
+import {Card} from "../models/card";
 
 // Page Styles
 import styles from '../styles/pages/Landing.module.scss'
 
 type LandingViewModel = {
-    heading: HeaderData
-    cards?: CardData[]
+    heading: Header
+    cards?: Card[]
 }
 
 const Landing = ( {content} : InferGetStaticPropsType<typeof getStaticProps> ) => {
@@ -51,17 +51,17 @@ const Landing = ( {content} : InferGetStaticPropsType<typeof getStaticProps> ) =
 
     return (
         <div className={styles.homeContainer}>
-            <Header title={content.heading.title} link={content.heading.link} />
+            <HeaderComponent title={content.heading.title} link={content.heading.link} />
 
             <main>
                 <div className={styles.cards}>
                     {content.cards?.map((card, index) => {
                         return (
-                            <Card key={index}
-                                  icon={card.icon}
-                                  heading={card.heading}
-                                  body={card.body}
-                                  button={card.button}
+                            <CardComponent key={index}
+                                           icon={card.icon}
+                                           heading={card.heading}
+                                           body={card.body}
+                                           button={card.button}
                             />
                         )
                     })}

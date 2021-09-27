@@ -2,11 +2,11 @@ import type { InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/pages/Home.module.css'
-import {CardData} from "../models/common";
+import {Card} from "../models/card";
 
 type HomeViewModel = {
   title: string
-  cards?: CardData[]
+  cards?: Card[]
 }
 
 const Home = ( { content } : InferGetStaticPropsType<typeof getStaticProps> ) => {
