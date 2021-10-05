@@ -1,8 +1,8 @@
 import {Button, SvgIcon} from "./common";
 
 export interface Card {
-    icon?: SvgIcon;
+    icon: SvgIcon | null;
     heading: string;
     body: string;
-    button?: Button;
+    button: Button | null;
 }

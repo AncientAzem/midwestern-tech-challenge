@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82ee2088-a4c4-4162-b6cd-165f4ce131dd" name="Changes" comment="Added Header">
+      <change afterPath="$PROJECT_DIR$/models/apiModels.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../api/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/formInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/formInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/common.ts" beforeDir="false" afterPath="$PROJECT_DIR$/models/common.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/forms.ts" beforeDir="false" afterPath="$PROJECT_DIR$/models/forms.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/card.ts" beforeDir="false" afterPath="$PROJECT_DIR$/models/card.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/FormInput.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/FormInput.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/pages/Landing.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/pages/Landing.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,9 +26,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
         <option value="SCSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -39,7 +44,11 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/styles/components/Header.module.scss" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pages/_app.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pages/contact.tsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/models/card.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pages/example.tsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/models/common.ts" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/components/header.tsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/components/card.tsx" root0="FORCE_HIGHLIGHTING" />
@@ -47,10 +56,6 @@
     <setting file="file://$PROJECT_DIR$/styles/globals.scss" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/styles/pages/Landing.module.scss" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/pages/index.tsx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/styles/components/Header.module.scss" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/pages/_app.tsx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/pages/contact.tsx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/pages/example.tsx" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1yeT0eeRydAuDyZkvIWc4T3P3MO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -64,6 +69,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.last.introduce.type" value="VAR" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pages" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -79,10 +85,28 @@
       <recent name="\\wsl$\Ubuntu\home\devjinial\projects\mi-tech-challenge\web\pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\devjinial\projects\mi-tech-challenge\web\models" />
       <recent name="\\wsl$\Ubuntu\home\devjinial\projects\mi-tech-challenge\web\styles\pages" />
       <recent name="\\wsl$\Ubuntu\home\devjinial\projects\mi-tech-challenge\web\styles\components" />
       <recent name="\\wsl$\Ubuntu\home\devjinial\projects\mi-tech-challenge\web\public\images" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="wsl://Ubuntu@/home/devjinial/.nvm/versions/node/v16.10.0/bin/node" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -99,7 +123,8 @@
       <workItem from="1632629809684" duration="1229000" />
       <workItem from="1632631071780" duration="3690000" />
       <workItem from="1632690912699" duration="1218000" />
-      <workItem from="1632692162877" duration="22346000" />
+      <workItem from="1632692162877" duration="23549000" />
+      <workItem from="1633448859088" duration="8164000" />
     </task>
     <task id="LOCAL-00001" summary="Added Loop to Home Page">
       <created>1632614062489</created>

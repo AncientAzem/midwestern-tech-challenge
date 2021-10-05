@@ -7,11 +7,12 @@ import HeaderComponent from "../components/header";
 import CardComponent from "../components/card";
 
 // Models for Components
-import {Header} from "../models/common";
+import {Header, SvgIcon} from "../models/common";
 import {Card} from "../models/card";
 
 // Page Styles
 import styles from '../styles/pages/Landing.module.scss'
+import {SiteCalloutDatabaseModel} from "../models/apiModels";
 
 type LandingViewModel = {
     heading: Header
@@ -87,55 +88,62 @@ const Landing = ( {content} : InferGetStaticPropsType<typeof getStaticProps> ) =
 }
 
 export const getStaticProps = async () => {
+    const pageDataRequest = await fetch('http://localhost:8081/api/content/index');
+    const pageCalloutsRequest = await fetch('http://localhost:8081/api/callouts');
+
+    const pageData = await pageDataRequest.json();
+    const pageCallouts = await pageCalloutsRequest.json();
+
+    let cards: Card[] = [];
+    pageCallouts.forEach(function (callout: SiteCalloutDatabaseModel) {
+        let card: Card = {
+            body: callout.body,
+            button: null,
+            heading: callout.heading,
+            icon: null
+        }
+
+        // Process Icon
+        if (callout.icon != undefined) {
+            card.icon = {
+                height: 0, width: 0,
+                path: `/images/${callout.icon}.svg`
+            };
+            if (callout.icon == 'Talkie') {
+                card.icon.height = 106;
+                card.icon.width = 51;
+            } else if (callout.icon == 'Rabbit') {
+                card.icon.height = 62;
+                card.icon.width = 103;
+            } else if (callout.icon == 'Shield') {
+                card.icon.height = 98;
+                card.icon.width = 98;
+            } else {
+                card.icon = null;
+            }
+        }
+
+        console.log(callout);
+        // Process Button
+        if (callout.link_text != undefined && callout.link_url != undefined){
+            card.button = {
+                text: callout.link_text!,
+                url: callout.link_url!
+            }
+        }
+
+        cards.push(card);
+    });
+
     const content: LandingViewModel = {
         heading: {
-            title: 'Tech Challenge | Home',
+            title: pageData.title,
             link: {
                 text: "Contact",
                 url: "/contact"
             }
         },
-        cards: [
-            {
-                icon: {
-                    path:  "/images/Talkie.svg",
-                    width: 50,
-                    height: 105
-                },
-                heading: "Heading One",
-                body: "Integer accumsan molestie nisl, id faucibus urna accumsan quis. Proin vulputate, mauris semper maximus. ",
-                button: {
-                    text: "Learn More",
-                    url: "https://github.com/Midwestern-Interactive/tech-challenge"
-                }
-            },
-            {
-                icon: {
-                    path:  "/images/Rabbit.svg",
-                    width: 105,
-                    height: 62
-                },
-                heading: "Heading Two",
-                body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-                button: {
-                    text: "Learn More",
-                    url: "https://github.com/Midwestern-Interactive/tech-challenge"
-                }
-            },
-            {
-                icon: {
-                    path:  "/images/Shield.svg",
-                    width: 98,
-                    height: 98
-                },
-                heading: "Heading Three",
-                body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-                button: {
-                    text: "Learn More",
-                    url: "https://github.com/Midwestern-Interactive/tech-challenge"
-                }
-            }
-        ]
+        cards: cards
     }
 
     return {

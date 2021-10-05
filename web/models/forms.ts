@@ -4,10 +4,10 @@ export interface Input {
     label: string;
     placeholder?: string;
     required: boolean;
-    valid?: boolean;
 }
 
-interface UpdatedStatusFunc {
-    input: Input;
-    isValid: boolean;
+export interface FormDataItem {
+    id: string;
+    value: any;
+    valid: boolean;
 }

@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\SiteContentController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FeaturedCalloutsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/greeting', function () {
     return 'Hello World';
 });
+
+Route::resource('/content', SiteContentController::class);
+Route::get('/callouts', FeaturedCalloutsController::class);
+Route::resource('/contact', ContactController::class);

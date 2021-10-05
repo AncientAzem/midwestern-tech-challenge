@@ -8,30 +8,33 @@ import {Header} from '../models/common'
 // Page Styles
 import styles from '../styles/pages/Contact.module.scss';
 import {InferGetStaticPropsType} from "next";
+import Router from 'next/router'
 import React, {useRef, useState} from "react";
-import {Input} from "../components/forms";
+import {FormDataItem, Input} from "../models/forms";
+import Swal from "sweetalert2";
 
 type ContactPageViewModel = {
     heading: Header
+    instructions: string
     inputs: Input[]
 }
 
 const Contact = ( {content} : InferGetStaticPropsType<typeof getStaticProps> ) => {
-    const [formData, updateFormData] = useState<Input[]>();
+    const [formData, updateFormData] = useState<FormDataItem[]>();
     let formValid = false;
+    let contactForm: HTMLFormElement | null;
 
-    function handleUpdatedInput(inputObject: Input, isValid: boolean){
+    function handleUpdatedInput(id: string, value: any, isValid: boolean){
         if(formData == undefined) {
-            updateFormData([inputObject])
+            updateFormData([{id: id, value: value, valid: isValid}])
         } else {
             let newFormData = formData;
-            let existingItemIndex = newFormData.findIndex(i => i.id == inputObject.id);
-            console.log(existingItemIndex)
+            let existingItemIndex = newFormData.findIndex(i => i.id == id);
             if(existingItemIndex == -1){
-                inputObject.valid = isValid;
-                newFormData.push(inputObject)
+                newFormData.push({id: id, value: value, valid: isValid})
             } else {
                 newFormData[existingItemIndex].valid = isValid;
+                newFormData[existingItemIndex].value = value;
                 updateFormData(newFormData);
             }
         }
@@ -42,8 +45,36 @@ const Contact = ( {content} : InferGetStaticPropsType<typeof getStaticProps> ) =
         }
     }
 
-    function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+        event.preventDefault();
 
+        const submissionData = new FormData();
+        formData?.forEach(input => {
+            submissionData.append(input.id, input.value);
+        })
+        console.log(submissionData);
+
+        const request = await fetch('http://localhost:8081/api/contact', {
+            body: submissionData,
+            method: 'POST'
+        })
+        if (request.status != 200) {
+            console.log('ERROR')
+            await Swal.fire({
+                title: "Ohh No!",
+                text: "Something went wrong when submitting your request. Please try again.",
+                icon: "error"
+            })
+        } else {
+            console.log('DONE');
+            await Swal.fire({
+                title: "Submission Complete",
+                text: await request.text(),
+                icon: "success"
+            }).then(_ => {
+                Router.reload();
+            })
+        }
     }
 
     return (
@@ -54,10 +85,7 @@ const Contact = ( {content} : InferGetStaticPropsType<typeof getStaticProps> ) =
                 <main>
                     <section className={styles.instructions}>
                         <h1><span className={'underline'}>Contact</span> Us</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do dos eiusmod tempor incididunt ut labore et trace dolore magna aliqua.
-                            Proin sagittis nisl rhoncus mattis rhoncus. <br/><br/> At augue eget arcu dictum varius duis at consectetur lorem.
-                        </p>
+                        <p>{content.instructions}</p>
                     </section>
                     <section>
                         <div className={styles.formContent}>
@@ -87,14 +115,18 @@ const Contact = ( {content} : InferGetStaticPropsType<typeof getStaticProps> ) =
 }
 
 export const getStaticProps = async () => {
+    const response = await fetch('http://localhost:8081/api/content/contact');
+    const data = await response.json();
+
     const content: ContactPageViewModel = {
         heading: {
-            title: 'Tech Challenge | Contact',
+            title: data.title,
             link: {
                 text: 'Home',
                 url: '/'
             }
         },
+        instructions: data.body,
         inputs: [
             {id: 'firstName', type: 'text', label: 'First Name', required: true},
             {id: 'lastName', type: 'text', label: 'Last Name', required: true},

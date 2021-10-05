@@ -1,11 +1,11 @@
 import React, {Component, ChangeEvent, FocusEvent, useEffect} from "react";
-import validator from 'validator'
-import {Input, UpdatedStatusFunc} from "../models/forms";
+import {Input} from "../models/forms";
+import validator from 'validator';
 import styles from '../styles/components/FormInput.module.scss'
 
 type FormInput = {
     input: Input;
-    updateHandler: UpdatedStatusFunc;
+    updateHandler: (id: string, value: any, isValid: boolean) => void;
 }
 
 class FormInputComponent extends Component<FormInput>{
@@ -49,13 +49,13 @@ class FormInputComponent extends Component<FormInput>{
         let target = ev.target;
         if(!target.value) {
             target.parentElement!.classList.remove(styles.active);
-            this.props.updateHandler(this.props.input, this.validateInput(target));
+            this.props.updateHandler(this.props.input.id, target.value, this.validateInput(target));
         }
     }
 
     handleOnChange(ev: ChangeEvent<any>) {
         let target = ev.target;
-        this.props.updateHandler(this.props.input, this.validateInput(target));
+        this.props.updateHandler(this.props.input.id, target.value, this.validateInput(target));
     }
 
     render() {
